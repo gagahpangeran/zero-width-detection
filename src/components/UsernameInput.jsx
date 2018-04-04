@@ -7,7 +7,6 @@ const UsernameInput = ({ handleChange }) => (
       onChange={handleChange}
       type="text"
       className="form-control"
-      placeholder="Username"
       aria-label="Username"
     />
   </div>
