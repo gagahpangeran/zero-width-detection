@@ -73,7 +73,7 @@ class App extends Component {
           </div>
 
           <div className="row-4">
-            <h2>2: Copy text below</h2>
+            <h2>Copy text below</h2>
             <ConfidentialText
               heading={this.state.confidentialHeading}
               //text={this.state.confidentialText}
@@ -82,13 +82,14 @@ class App extends Component {
           </div>
 
           <div className="row-4">
-            <h2>3: Paste copied text here:</h2>
+            <h2>Paste Message</h2>
             <TextInput handleChange={this.revealUsername} />
           </div>
 
           <div className="row-4">
-            <h2>4: Your username is...</h2>
+            <h2>Your Hidden Message</h2>
             <UsernameOutput username={this.state.revealedUsername} />
+            {/*
             {this.state.dontBelieve && (
               <p className="text-muted">
                 {this.state.dontBelieve}
@@ -97,6 +98,7 @@ class App extends Component {
                 </a>
               </p>
             )}
+          */}
           </div>
         </div>
       </div>
