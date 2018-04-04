@@ -18,7 +18,7 @@ class App extends Component {
       revealedUsername: '',
       zeroWidthUsername: '',
       confidentialHeading: 'Confidential Announcement: ',
-      confidentialText: "This is some confidential text that you really shouldn't be sharing anywhere else.",
+      //confidentialText: "Ini teks kelihatan",
     };
     this.getUsername = this.getUsername.bind(this);
     this.revealUsername = this.revealUsername.bind(this);
@@ -32,9 +32,10 @@ class App extends Component {
 
   revealUsername(event) {
     const confidentialInformation = event.target.value.replace(this.state.confidentialHeading, '');
-    const zeroWidthUsername = confidentialInformation.replace(this.state.confidentialText, '');
+    //const zeroWidthUsername = confidentialInformation.replace(this.state.confidentialText, '');
     this.setState({
-      revealedUsername: zeroWidthToUsername(zeroWidthUsername),
+      //revealedUsername: zeroWidthToUsername(zeroWidthUsername),
+      revealedUsername: zeroWidthToUsername(confidentialInformation),
       dontBelieve: "Don't believe me? Try pasting the text here again in a different browser or through incognito mode. ",
     });
   }
@@ -55,7 +56,7 @@ class App extends Component {
             <h2>2: Copy text below</h2>
             <ConfidentialText
               heading={this.state.confidentialHeading}
-              text={this.state.confidentialText}
+              //text={this.state.confidentialText}
               username={this.state.zeroWidthUsername}
             />
           </div>
